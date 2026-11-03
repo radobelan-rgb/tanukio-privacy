@@ -38,7 +38,7 @@ footer{border-top:1px solid var(--line);background:#14111e}footer div{max-width:
 <div class="legal-label">✳ &nbsp; Your data, your choice</div>
 <main id="legal-content">
 <h1>Tanukio Privacy Policy</h1>
-<p><strong>Last updated:</strong> 25 August 2026</p>
+<p><strong>Last updated:</strong> 3 November 2026</p>
 
 <p>Tanukio is a personal expense, receipt and warranty management application for Android. This policy explains what information Tanukio processes, what stays on your device, what may be sent to service providers, and what choices you have.</p>
 
@@ -53,23 +53,27 @@ footer{border-top:1px solid var(--line);background:#14111e}footer div{max-width:
 
 <h2>3. Optional payment-notification recognition</h2>
 <p>If you explicitly enable payment-notification recognition and grant Android notification access, Tanukio can read new notifications from supported banks, wallets and payment-like messages on your device in order to identify possible payments and prepare an expense suggestion for your review.</p>
-<p>The original bank or wallet notification text is processed locally. Tanukio does not store the raw notification text in the expense database or backups and does not automatically upload it. A recent payment-like notification that was not recognized may be kept only temporarily in volatile memory, for up to approximately one hour, so that you can choose to create a diagnostic report.</p>
+<p>The original bank or wallet notification text is processed locally. Tanukio does not store the raw notification text in the expense database or backups and does not automatically upload it. A recent payment-like notification that was not recognized may be kept temporarily in volatile memory so that you can choose to create a diagnostic report. Candidates older than approximately one hour are removed when another candidate is received or when the relevant settings screen is opened or resumed. Until that cleanup or until the app process ends, they may remain in memory longer.</p>
 <p>Tanukio may store privacy-reduced technical metadata about notification recognition locally, such as the source application, Android version, notification style and whether recognition succeeded. When optional usage analytics are enabled, only sanitized categorical diagnostic information may be sent to Firebase Analytics; raw notification text, amounts, balances, merchant names, card/account numbers and locations are not included.</p>
 
 <h2>4. Firebase Analytics — optional</h2>
-<p>Anonymous usage analytics are disabled until you choose to enable them. If enabled, Tanukio uses Google Firebase Analytics to understand how app features and onboarding are used.</p>
+<p>Optional usage analytics are disabled by default on a fresh installation until you choose to enable them. If enabled, Tanukio uses Google Firebase Analytics to understand how app features and onboarding are used.</p>
 <p>Analytics may include app interactions, app language and selected settings, coarse device/locale information, an app-instance identifier and an optional coarse age group if you supplied one. Google Analytics may derive approximate location from network information such as a masked IP address.</p>
 <p>Tanukio is designed not to send receipt text, expense amounts, merchant names, product names, receipt photos, PDF contents, notes, your nickname or raw notification content to Firebase Analytics. Advertising storage, advertising user data and ad-personalization signals are disabled in the current release configuration.</p>
 
+<h2>4a. Firebase Performance Monitoring — optional</h2>
+<p>When you enable optional usage analytics, Tanukio also enables Firebase Performance Monitoring. It is disabled by default on a fresh installation and follows the same analytics setting. It can collect performance measurements, such as the time needed for receipt recognition and app startup, and technical information such as app version, device and operating-system details, network type and app-instance or installation identifiers. Google's service may process network information, including an IP address, to provide the service.</p>
+<p>Tanukio's own receipt-processing performance measurements use fixed labels and durations; they are designed not to include receipt images, recognized text, merchant names or expense amounts.</p>
+
 <h2>5. Technical crash reports</h2>
 <p>Tanukio uses Firebase Crashlytics for technical crash reporting. Crashlytics can process crash stack traces, relevant app state, application/device metadata and installation identifiers needed to diagnose stability problems. Tanukio's diagnostic code is designed not to attach receipt text, expense amounts, merchant names, photos, notes or raw notification contents to Crashlytics reports.</p>
-<p>Technical crash reporting can be controlled from Tanukio's privacy and diagnostics settings. In the current closed-test release it is disabled by default on a fresh install and is enabled only if you explicitly turn on technical crash reports in the app settings.</p>
+<p>Technical crash reporting is controlled separately in Tanukio's privacy and diagnostics settings. In the current public release it is disabled by default on a fresh install and is enabled only if you explicitly turn on technical crash reports. If you turn them off, Firebase applies that change on the next app launch.</p>
 
 <h2>6. Firebase Remote Config</h2>
-<p>Tanukio uses Firebase Remote Config for limited configuration and product experiments. Remote configuration is fetched only after optional anonymous usage analytics are enabled in the current implementation. Firebase may process technical metadata such as app/device information, platform/OS information, language, country, timezone and an installation identifier to provide the service.</p>
+<p>Tanukio uses Firebase Remote Config for limited configuration and product experiments. Remote configuration is fetched only after optional usage analytics are enabled in the current implementation. Firebase may process technical metadata such as app/device information, platform/OS information, language, country, timezone and an installation identifier to provide the service.</p>
 
 <h2>7. Exchange rates</h2>
-<p>If exchange-rate conversion is used, Tanukio may contact the European Central Bank's public exchange-rate service over HTTPS. Tanukio does not send receipt contents, merchant names, notes or your expense history to the ECB. As with any internet request, standard network metadata necessary to serve the request may be processed by the network provider and destination server.</p>
+<p>When currency conversion is needed, Tanukio may contact the European Central Bank's public exchange-rate service over HTTPS. This may also happen when refreshing existing foreign-currency expenses at app startup or after you change the selected currency. Requests include a date range for the rates; a historical request may reflect the date of an expense. Tanukio does not send receipt contents, amounts, merchant names, notes or your expense history to the ECB. Standard network metadata necessary to serve the request may be processed by the network provider and destination server.</p>
 
 <h2>8. Voluntary OCR feedback</h2>
 <p>Tanukio includes an optional feature that lets you prepare feedback intended to improve receipt recognition. Nothing is sent automatically. If you choose to use this feature, Tanukio creates a package on your device and opens a share/email application for you to send it.</p>
@@ -80,16 +84,16 @@ footer{border-top:1px solid var(--line);background:#14111e}footer div{max-width:
 <p>If a payment notification is not recognized, Tanukio can generate a strongly redacted diagnostic preview on your device. You can review and edit the preview before sharing it. Nothing is sent automatically.</p>
 
 <h2>10. Backup, export and sharing</h2>
-<p>When you create a backup or export, you choose where the resulting file is saved or which external application/service receives it. A Tanukio backup may contain expenses, categories, budgets, warranties, learned rules, receipt images and PDF documents. If you save or share a backup through a third-party cloud storage, email or file-sharing service, that third party processes the file under its own privacy policy.</p>
+<p>When you create a backup or export, you choose where the resulting file is saved or which external application/service receives it. You can also choose to enable automatic backups and select their destination. A Tanukio backup may contain expenses, categories, budgets, warranties, learned rules, receipt images and PDF documents. If you save or share a backup through a third-party cloud storage, email or file-sharing service, that third party processes the file under its own privacy policy.</p>
 
 <h2>11. Advertising and purchases</h2>
-<p>The current closed-test release does not display live third-party advertising and does not process live in-app purchases. If advertising or Google Play Billing is enabled in a future version, this policy and the Google Play Data Safety information will be updated before release.</p>
+<p>The current public release does not display live third-party advertising and does not process live in-app purchases. If advertising or Google Play Billing is enabled in a future version, this policy and the Google Play Data Safety information will be updated before release.</p>
 
 <h2>12. Security</h2>
 <p>Tanukio limits automatic network transmission of financial and receipt content and uses platform/service HTTPS/TLS connections for supported online services. No software can guarantee absolute security, but the app is designed to keep core expense and receipt processing local and to minimize data sent to external services.</p>
 
 <h2>13. Retention and deletion</h2>
-<p>Local app data remains on your device until you delete it, clear the app's data or uninstall the app, subject to Android storage behavior and any backups/exports you created yourself. Temporary raw payment-notification candidates are held only in memory and expire after approximately one hour. Data processed by Google/Firebase services is retained according to the applicable Google/Firebase service terms and retention settings.</p>
+<p>Local app data remains on your device until you delete it, clear the app's data or uninstall the app, subject to Android storage behavior and any backups/exports you created yourself. Temporary raw payment-notification candidates are held only in memory. Candidates older than approximately one hour are removed during the next cleanup described in section 3 or when the app process ends. Data processed by Google/Firebase services is retained according to the applicable Google/Firebase service terms and retention settings.</p>
 <p>For deletion of voluntary feedback previously sent to Tanukio support, contact <a href="mailto:support.tanukio@gmail.com">support.tanukio@gmail.com</a>.</p>
 
 <h2>14. Children</h2>
@@ -98,10 +102,13 @@ footer{border-top:1px solid var(--line);background:#14111e}footer div{max-width:
 <h2>15. Changes to this policy</h2>
 <p>This policy may be updated when Tanukio's features, service providers or data practices change. The “Last updated” date at the top will be revised when material changes are made.</p>
 
+<h2>16. Tanukio website</h2>
+<p>The Tanukio website is hosted on GitHub Pages; GitHub records visitors' IP addresses for security. The landing page may load fonts and an app screenshot from Google, which can receive network information such as your IP address and request or browser details when those resources load. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a> for information about their practices.</p>
+
 <hr>
 
 <h1 lang="sk">Zásady ochrany súkromia Tanukio</h1>
-<p lang="sk"><strong>Posledná aktualizácia:</strong> 25. augusta 2026</p>
+<p lang="sk"><strong>Posledná aktualizácia:</strong> 3. novembra 2026</p>
 <p lang="sk">Tanukio je Android aplikácia na správu osobných výdavkov, bločkov a záruk. Základné údaje o výdavkoch, bločkoch, zárukách, kategóriách, rozpočtoch, poznámkach a nastaveniach sa ukladajú prednostne lokálne v zariadení. Tanukio nevyžaduje účet a neposkytuje vlastný cloudový účet.</p>
 <p lang="sk"><strong>Kontakt pre otázky o súkromí:</strong> <a href="mailto:support.tanukio@gmail.com">support.tanukio@gmail.com</a></p>
 
@@ -109,25 +116,36 @@ footer{border-top:1px solid var(--line);background:#14111e}footer div{max-width:
 <p lang="sk">Rozpoznávanie textu a skenovanie dokumentov je navrhnuté tak, aby prebiehalo v zariadení pomocou komponentov Google ML Kit. Obraz bločka alebo dokumentu a rozpoznávaný text sa kvôli samotnému rozpoznaniu neposielajú do Googlu. ML Kit a Google Play services však môžu spracovať obmedzené technické údaje o zariadení, aplikácii, inštalácii, používaní funkcií, výkone, chybách a verziách modelov/komponentov.</p>
 
 <h2 lang="sk">Voliteľné čítanie platobných upozornení</h2>
-<p lang="sk">Ak túto funkciu výslovne zapneš a udelíš Androidu prístup k upozorneniam, Tanukio môže čítať nové upozornenia podporovaných bánk, peňaženiek alebo správ podobných platbe, aby rozpoznalo možnú platbu. Pôvodný text sa spracuje lokálne, neukladá sa do databázy výdavkov ani záloh a automaticky sa neodosiela. Nerozpoznané upozornenie podobné platbe môže zostať dočasne iba v pamäti, približne najviac jednu hodinu, aby si mohol dobrovoľne vytvoriť diagnostiku.</p>
+<p lang="sk">Ak túto funkciu výslovne zapneš a udelíš Androidu prístup k upozorneniam, Tanukio môže čítať nové upozornenia podporovaných bánk, peňaženiek alebo správ podobných platbe, aby rozpoznalo možnú platbu. Pôvodný text sa spracuje lokálne, neukladá sa do databázy výdavkov ani záloh a automaticky sa neodosiela. Nerozpoznané upozornenie podobné platbe môže zostať dočasne iba v pamäti, aby si mohol dobrovoľne vytvoriť diagnostiku. Záznamy staršie ako približne hodina sa odstránia pri prijatí ďalšieho takého záznamu alebo pri otvorení či opätovnom zobrazení príslušnej obrazovky nastavení. Do tohto vyčistenia alebo ukončenia procesu aplikácie môžu v pamäti zostať aj dlhšie.</p>
 
 <h2 lang="sk">Voliteľná analytika</h2>
-<p lang="sk">Firebase Analytics je vypnutý, kým ho používateľ nepovolí. Po povolení môže Tanukio odosielať anonymizované udalosti o používaní aplikácie, vybrané nastavenia, jazyk, hrubé technické údaje a voliteľnú vekovú skupinu. Do analytiky sa zámerne neposiela text bločka, suma, obchodník, produkt, fotografia, PDF obsah, poznámka, prezývka ani pôvodný obsah platobného upozornenia. Reklamné a personalizačné signály sú v aktuálnom release nastavení vypnuté.</p>
+<p lang="sk">Firebase Analytics je pri novej inštalácii predvolene vypnutý, kým ho používateľ nepovolí. Po povolení môže Tanukio odosielať udalosti o používaní aplikácie, vybrané nastavenia, jazyk, technické údaje, identifikátor inštancie aplikácie a voliteľnú vekovú skupinu. Google môže z údajov o pripojení odvodiť aj približnú polohu. Do analytiky sa zámerne neposiela text bločka, suma, obchodník, produkt, fotografia, PDF obsah, poznámka, prezývka ani pôvodný obsah platobného upozornenia. Reklamné a personalizačné signály sú v aktuálnom release nastavení vypnuté.</p>
+
+<h2 lang="sk">Voliteľné meranie výkonu</h2>
+<p lang="sk">Keď zapneš voliteľnú analytiku používania, Tanukio zapne aj Firebase Performance Monitoring. Pri novej inštalácii je predvolene vypnutý a riadi sa tým istým nastavením ako analytika. Môže zhromažďovať údaje o výkone, napríklad čas rozpoznávania bločkov či spustenia aplikácie, a technické údaje, ako sú verzia aplikácie, údaje o zariadení a operačnom systéme, typ siete a identifikátory inštancie alebo inštalácie. Google môže na poskytovanie služby spracovať aj údaje o pripojení vrátane IP adresy.</p>
+<p lang="sk">Vlastné merania spracovania bločkov v Tanukio používajú pevné označenia a dĺžky trvania; sú navrhnuté tak, aby neobsahovali obrázky bločkov, rozpoznaný text, názvy obchodníkov ani sumy výdavkov.</p>
 
 <h2 lang="sk">Technické hlásenia pádov</h2>
-<p lang="sk">Tanukio používa Firebase Crashlytics na technické hlásenia o pádoch. Môže spracovať stack trace, stav aplikácie, technické údaje o aplikácii/zariadení a identifikátory inštalácie. Tanukio do Crashlytics zámerne nepridáva text bločkov, sumy, obchodníkov, fotografie, poznámky ani pôvodný obsah upozornení. Technické hlásenia sa dajú ovládať v nastaveniach súkromia a diagnostiky; v aktuálnej verzii pre uzavreté testovanie sú pri novej inštalácii predvolene vypnuté a zapnú sa iba vtedy, keď ich používateľ výslovne povolí v nastaveniach.</p>
+<p lang="sk">Tanukio používa Firebase Crashlytics na technické hlásenia o pádoch. Môže spracovať stack trace, stav aplikácie, technické údaje o aplikácii/zariadení a identifikátory inštalácie. Tanukio do Crashlytics zámerne nepridáva text bločkov, sumy, obchodníkov, fotografie, poznámky ani pôvodný obsah upozornení. Technické hlásenia sa ovládajú samostatne v nastaveniach súkromia a diagnostiky; v aktuálnej verejnej verzii sú pri novej inštalácii predvolene vypnuté a zapnú sa iba vtedy, keď ich používateľ výslovne povolí. Ak ich vypneš, Firebase túto zmenu uplatní pri ďalšom spustení aplikácie.</p>
+
+<h2 lang="sk">Firebase Remote Config a výmenné kurzy</h2>
+<p lang="sk">Tanukio načítava obmedzenú konfiguráciu z Firebase Remote Config po zapnutí voliteľnej analytiky. Firebase môže spracovať technické údaje o aplikácii a zariadení, jazyk, krajinu, časové pásmo a identifikátor inštalácie.</p>
+<p lang="sk">Keď je potrebný menový prepočet, Tanukio môže cez zabezpečené spojenie požiadať verejnú službu Európskej centrálnej banky o výmenné kurzy. Môže sa to stať aj pri obnovení existujúcich výdavkov v cudzej mene po spustení aplikácie alebo po zmene vybranej meny. Žiadosť obsahuje obdobie kurzov; pri historickom kurze môže súvisieť s dátumom výdavku. Obsah bločka, sumu, obchodníka, poznámky ani históriu výdavkov Tanukio ECB neposiela. Poskytovatelia siete a cieľový server môžu spracovať bežné údaje o pripojení.</p>
 
 <h2 lang="sk">Dobrovoľná spätná väzba OCR</h2>
 <p lang="sk">Nič sa neposiela automaticky. Ak sa rozhodneš odoslať spätnú väzbu na rozpoznávanie, aplikácia vytvorí balík a otvorí e-mail/zdieľanie. Balík môže obsahovať naučené pravidlá a OCR diagnostiku vrátane obchodníka, sumy, meny, dátumu, rozpoznaných hodnôt a OCR textu. Fotografie bločkov sa pridajú iba po tvojom výbere. Pred odoslaním je potrebné obsah skontrolovať, pretože bločky a OCR text môžu obsahovať osobné alebo platobné údaje.</p>
 
 <h2 lang="sk">Zálohy a export</h2>
-<p lang="sk">Pri zálohe alebo exporte používateľ sám vyberá miesto alebo externú aplikáciu/službu. Záloha môže obsahovať výdavky, kategórie, rozpočty, záruky, naučené pravidlá, fotografie bločkov a PDF dokumenty. Externá služba potom spracúva súbor podľa vlastných pravidiel ochrany súkromia.</p>
+<p lang="sk">Pri zálohe alebo exporte používateľ sám vyberá miesto alebo externú aplikáciu/službu. Môže si tiež zapnúť automatické zálohy a vybrať ich umiestnenie. Záloha môže obsahovať výdavky, kategórie, rozpočty, záruky, naučené pravidlá, fotografie bločkov a PDF dokumenty. Externá služba potom spracúva súbor podľa vlastných pravidiel ochrany súkromia.</p>
 
 <h2 lang="sk">Reklamy a nákupy</h2>
-<p lang="sk">Aktuálna closed-test verzia nezobrazuje živé reklamy tretích strán a nespracúva reálne nákupy v aplikácii.</p>
+<p lang="sk">Aktuálna verejná verzia nezobrazuje živé reklamy tretích strán a nespracúva reálne nákupy v aplikácii.</p>
 
 <h2 lang="sk">Vymazanie údajov</h2>
 <p lang="sk">Lokálne údaje zostávajú v zariadení, kým ich používateľ neodstráni, nevymaže dáta aplikácie alebo aplikáciu neodinštaluje, s prihliadnutím na zálohy/exporty, ktoré si vytvoril sám. O vymazanie dobrovoľne odoslanej podpory alebo diagnostiky môžeš požiadať na <a href="mailto:support.tanukio@gmail.com">support.tanukio@gmail.com</a>.</p>
+
+<h2 lang="sk">Webová stránka Tanukio</h2>
+<p lang="sk">Webová stránka Tanukio je umiestnená na GitHub Pages; GitHub zaznamenáva IP adresy návštevníkov na bezpečnostné účely. Úvodná stránka môže načítať písmo a obrázok aplikácie od Googlu, ktorý pri načítaní môže dostať údaje o pripojení, napríklad IP adresu a informácie o požiadavke alebo prehliadači. Podrobnosti nájdeš v <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">zásadách GitHubu</a> a <a href="https://policies.google.com/privacy">zásadách Googlu</a>.</p>
 
 <h2 lang="sk">Deti</h2>
 <p lang="sk">Tanukio je navrhnuté ako nástroj osobných financií pre dospelých a nie je určené deťom.</p>
