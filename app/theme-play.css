@@ -1,0 +1,100 @@
+/* Visual palette follows Tanukio's Google Play screenshots. */
+:root {
+  --ink: #f5f3fa;
+  --green: #a681f2;
+  --green-dark: #1b1628;
+  --mint: #2b213f;
+  --paper: #100f19;
+  --muted: #c2bdcf;
+  --line: #343041;
+  --serif: 'DM Sans', Arial, sans-serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}
+body { background: #100f19; color: #f5f3fa; }
+.announcement { background: #221a30; color: #e5dcf5; }
+.announcement-dot { background: #b794ff; }
+.site-header { background: #100f19; }
+.brand-dot { color: #a57cf2; }
+.nav-links { color: #e0dbe9; }
+.button-dark { background: #8359d7; color: #fff; }
+.button-dark:hover { background: #9971e8; }
+.hero { background: linear-gradient(112deg, #100f19 0%, #12101d 60%, #1d1530 100%); }
+.eyebrow { color: #bca4eb; }
+.eyebrow-icon { background: #302345; color: #b99bfa; }
+.hero h1, .section-heading h2, .app-preview h2, .story h2, .privacy h2, .faq h2, .final-cta h2 {
+  font-weight: 800;
+  letter-spacing: -.055em;
+}
+.hero h1 em, h2 em { color: #a985f2; font-weight: 800; font-style: normal; }
+.hero-lead { color: #c3becd; }
+.hero-lead strong { color: #f7f5fd; }
+.text-link { color: #eeeaf8; }
+.hero-note { color: #c0b9cb; }
+.hero-note span { color: #b69af2; }
+.mascot-halo { background: radial-gradient(circle at 43% 33%, #47335f, #2a203b 66%, #211a30); }
+.hero-orbit { border-color: #584674; }
+.hero-stamp { color: #f2edf9; border-color: #6b5587; background: rgba(32, 25, 45, .92); }
+.hero-stamp strong { font-weight: 700; }
+.hero-stamp i, .hero-star { color: #b295f0; }
+.star-two { color: #c6adf6; }
+.receipt-note { background: #292336; border-color: #51445f; color: #faf8ff; box-shadow: 0 10px 30px #0006; }
+.receipt-icon { background: #3d3152; color: #cbb4ff; }
+.receipt-note small { color: #b8aec3; }
+.receipt-spark { color: #bfa1f5; }
+.hero-bottom { color: #aaa3b5; }
+.hero-bottom a span { color: #bd9aff; }
+.intro { background: #15131e; }
+.kicker { color: #b7a5cc; }
+.kicker span { color: #c7acf9; border-color: #625373; }
+.section-heading > p, .app-preview p { color: #c2bdcb; }
+.feature-card { border: 1px solid #3a3349; }
+.card-scan { background: #262034; }
+.card-budget { background: #24202f; }
+.card-warranty { background: #211e2e; }
+.feature-number { color: #c0aecf; }
+.feature-card h3 { color: #fbf9ff; font-weight: 800; letter-spacing: -.04em; }
+.feature-card p { color: #c5bdce; }
+.card-icon { background: #3e3053; border-color: #594568; }
+.card-icon svg { stroke: #c4a7fd; }
+.card-tag { border-color: #594d68; color: #d9cdec; }
+.mini-chart > span { background: #a47be7; }
+.mini-chart i { color: #c6abf9; }
+.warranty-art { background: #3a304b; border-color: #655578; color: #e5d9f6; }
+.warranty-art i { border-color: #b494e5; }
+.app-preview { background: #101019; }
+.app-preview figure { background: #262130; border-color: #494052; box-shadow: 0 14px 35px #0005; }
+.app-preview figcaption { color: #c5b9d1; }
+.app-preview figcaption span { color: #bd9af6; }
+.story { background: #181520; }
+.story-art { background: #30263f; }
+.story-art-bg { background-image: radial-gradient(#a688d1 1px, transparent 1px); opacity: .17; }
+.story-circle { border-color: #715a87; }
+.story-label { background: #242030; color: #f5effc; }
+.story-label span { color: #bc99f6; }
+.story-lead, .step p { color: #c3bdcd; }
+.step { border-color: #403849; }
+.step > span { color: #be9df5; font-weight: 700; }
+.privacy { background: #100e19; color: #f8f6fd; }
+.kicker-light { color: #b8a9cc; }
+.kicker-light span { color: #c7acf9; border-color: #625373; }
+.privacy h2 em { color: #a985f2; }
+.privacy-grid > div > p { color: #c8c0d0; }
+.privacy-tiles > div { background: #252031; border-color: #463a52; }
+.privacy-symbol { color: #c6a7fb; }
+.privacy-tiles p { color: #c8becf; }
+.faq { background: #17141f; }
+.faq-list, .faq details { border-color: #443b4d; }
+.faq summary span { color: #c1a0fa; }
+.faq details p { color: #c5bdce; }
+.final-cta { background: #2c203e; }
+.final-copy p { color: #d0c5d8; }
+.final-art:before { border-color: #6b547d; }
+.final-art > span { color: #bc9af5; }
+footer { background: #100f19; }
+.footer-top p, .footer-bottom { color: #bbb3c2; }
+.footer-bottom { border-color: #383141; }
+.footer-bottom span span { color: #b392ef; }
+a:focus-visible, summary:focus-visible { outline-color: #cbb1ff; }
+@media (max-width: 650px) {
+  .hero h1 { letter-spacing: -.06em; }
+}

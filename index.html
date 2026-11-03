@@ -4,13 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tanukio Privacy Policy</title>
+<meta name="theme-color" content="#100f19">
+<meta name="description" content="Learn how Tanukio handles personal data, receipt scanning, backups and privacy controls.">
+<link rel="canonical" href="https://radobelan-rgb.github.io/tanukio-privacy/">
 <style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 20px;line-height:1.6;color:#202124}
-h1,h2{line-height:1.25}.note{background:#f4f6f8;border-radius:10px;padding:14px 16px}
-small{color:#5f6368}a{color:#0b57d0}
+:root{color-scheme:dark;--bg:#100f19;--panel:#1d1928;--ink:#f5f3fa;--muted:#c7c0d0;--accent:#b394f5;--line:#40384b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#cfb9ff;text-underline-offset:4px}a:hover{color:#e9ddff}
+a:focus-visible{outline:3px solid #cbb1ff;outline-offset:4px}
+.skip-link{position:absolute;top:-80px;left:16px;padding:12px;background:#fff;color:#171123;z-index:3}.skip-link:focus{top:12px}
+.topbar{border-bottom:1px solid var(--line);background:#14111e}
+.topbar-inner{max-width:1100px;margin:auto;min-height:80px;padding:0 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:#f8f6ff;text-decoration:none;font-weight:800;font-size:25px;letter-spacing:-1.1px}.brand span{color:#b18bfd}
+.back{font-size:13px;font-weight:700;color:#e4d8f8;text-decoration:none;border:1px solid #615177;border-radius:8px;padding:10px 14px;white-space:nowrap}.back:hover{background:#352846}
+.legal-label{max-width:960px;margin:64px auto 18px;padding:0 30px;color:#bd9df5;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+main{max-width:900px;margin:0 auto 75px;padding:55px 62px 60px;background:var(--panel);border:1px solid #3c3349;border-radius:18px;box-shadow:0 18px 55px #0003}
+main h1{font-size:clamp(32px,5vw,46px);line-height:1.15;letter-spacing:-.04em;margin:0 0 16px;color:#fff}
+main h2{font-size:19px;line-height:1.4;letter-spacing:-.01em;margin:35px 0 8px;color:#d8c6ff}
+main p, main li{font-size:15px;color:var(--muted);line-height:1.85}
+main p{margin:0 0 16px}main strong{color:#f1eafa}
+main hr{border:0;border-top:1px solid #4a3e59;margin:60px 0}
+main small{color:#c7c0d0}.note{background:#30283c;border-radius:10px;padding:14px 16px}
+footer{border-top:1px solid var(--line);background:#14111e}footer div{max-width:1100px;margin:auto;padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:16px;color:#ada4b7;font-size:12px}footer nav{display:flex;gap:22px;flex-wrap:wrap}footer a{color:#ddd1ef}
+@media(max-width:650px){.topbar-inner{min-height:70px;padding:0 20px}.brand{font-size:23px}.legal-label{margin-top:40px;padding:0 20px}main{margin:0 14px 50px;padding:32px 22px 38px;border-radius:14px}main h2{font-size:18px}main p,main li{font-size:15px}footer div{padding:22px 20px;align-items:flex-start;flex-direction:column}.back{font-size:12px;padding:9px 11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#legal-content">Skip to privacy policy</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="app/" aria-label="Tanukio home">tanukio<span>.</span></a><a class="back" href="app/">← Back to Tanukio</a></div></header>
+<div class="legal-label">✳ &nbsp; Your data, your choice</div>
+<main id="legal-content">
 <h1>Tanukio Privacy Policy</h1>
 <p><strong>Last updated:</strong> 25 August 2026</p>
 
@@ -105,5 +131,7 @@ small{color:#5f6368}a{color:#0b57d0}
 
 <h2 lang="sk">Deti</h2>
 <p lang="sk">Tanukio je navrhnuté ako nástroj osobných financií pre dospelých a nie je určené deťom.</p>
+</main>
+<footer><div><span>© 2026 Tanukio</span><nav aria-label="Legal links"><a href="app/">Home</a><a href="delete-data/">Data deletion</a><a href="mailto:support.tanukio@gmail.com">Contact</a></nav></div></footer>
 </body>
 </html>
